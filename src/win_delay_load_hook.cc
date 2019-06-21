@@ -18,7 +18,8 @@
 #include <delayimp.h>
 #include <string.h>
 
-static FARPROC WINAPI load_exe_hook(unsigned int event, DelayLoadInfo* info) {
+static FARPROC WINAPI load_exe_hook(unsigned int event, DelayLoadInfo *info)
+{
   HMODULE m;
   if (event != dliNotePreLoadLibrary)
     return NULL;
@@ -26,8 +27,8 @@ static FARPROC WINAPI load_exe_hook(unsigned int event, DelayLoadInfo* info) {
   if (_stricmp(info->szDll, HOST_BINARY) != 0)
     return NULL;
 
-  m = GetModuleHandle(NULL);
-  return (FARPROC) m;
+  m = GetModuleHandle("node");
+  return (FARPROC)m;
 }
 
 decltype(__pfnDliNotifyHook2) __pfnDliNotifyHook2 = load_exe_hook;
