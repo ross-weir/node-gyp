@@ -1,3 +1,15 @@
+v5.0.2 2019-06-??
+=================
+
+* [[`2761afbf73`](https://github.com/nodejs/node-gyp/commit/2761afbf73)] - **build,test**: add duplicate symbol test (Gabriel Schulhof) [#1689](https://github.com/nodejs/node-gyp/pull/1689)
+* [[`f952b08f84`](https://github.com/nodejs/node-gyp/commit/f952b08f84)] - **gyp**: move from \_\_future\_\_ import to the top of the file (cclauss) [#1789](https://github.com/nodejs/node-gyp/pull/1789)
+* [[`4f4a677dfa`](https://github.com/nodejs/node-gyp/commit/4f4a677dfa)] - **gyp**: use different default compiler for z/OS (Shuowang (Wayne) Zhang) [#1768](https://github.com/nodejs/node-gyp/pull/1768)
+* [[`611bc3c89f`](https://github.com/nodejs/node-gyp/commit/611bc3c89f)] - **lib**: add .json suffix for explicit require (Rod Vagg) [#1787](https://github.com/nodejs/node-gyp/pull/1787)
+* [[`d3478d7b0b`](https://github.com/nodejs/node-gyp/commit/d3478d7b0b)] - **meta**: add to .gitignore (Refael Ackermann) [#1573](https://github.com/nodejs/node-gyp/pull/1573)
+* [[`ec2eb44a30`](https://github.com/nodejs/node-gyp/commit/ec2eb44a30)] - **test**: use Nan in duplicate\_symbols (Gabriel Schulhof) [#1689](https://github.com/nodejs/node-gyp/pull/1689)
+* [[`1597c84aad`](https://github.com/nodejs/node-gyp/commit/1597c84aad)] - **test**: use Travis CI to run tests on every pull request (cclauss) [#1752](https://github.com/nodejs/node-gyp/pull/1752)
+* [[`dd9bf929ac`](https://github.com/nodejs/node-gyp/commit/dd9bf929ac)] - **zos**: update compiler options (Shuowang (Wayne) Zhang) [#1768](https://github.com/nodejs/node-gyp/pull/1768)
+
 v5.0.1 2019-06-20
 =================
 
