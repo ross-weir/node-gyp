@@ -1,3 +1,166 @@
+v6.1.0 2020-01-08
+=================
+
+* [[`9a7dd16b76`](https://github.com/nodejs/node-gyp/commit/9a7dd16b76)] - **doc**: remove backticks from Python version list (Rod Vagg) [#2011](https://github.com/nodejs/node-gyp/pull/2011)
+* [[`26cd6eaea6`](https://github.com/nodejs/node-gyp/commit/26cd6eaea6)] - **doc**: add GitHub Actions badge (#1994) (Rod Vagg) [#1994](https://github.com/nodejs/node-gyp/pull/1994)
+* [[`312c12ef4f`](https://github.com/nodejs/node-gyp/commit/312c12ef4f)] - **doc**: update macOS\_Catalina.md (#1992) (James Home) [#1992](https://github.com/nodejs/node-gyp/pull/1992)
+* [[`f7b6b6b77b`](https://github.com/nodejs/node-gyp/commit/f7b6b6b77b)] - **doc**: fix typo in README.md (#1985) (Suraneti Rodsuwan) [#1985](https://github.com/nodejs/node-gyp/pull/1985)
+* [[`6b8f2652dd`](https://github.com/nodejs/node-gyp/commit/6b8f2652dd)] - **doc**: add travis badge (Rod Vagg) [#1971](https://github.com/nodejs/node-gyp/pull/1971)
+* [[`20aa0b44f7`](https://github.com/nodejs/node-gyp/commit/20aa0b44f7)] - **doc**: macOS Catalina add two commands (Christian Clauss) [#1962](https://github.com/nodejs/node-gyp/pull/1962)
+* [[`14f2a07a39`](https://github.com/nodejs/node-gyp/commit/14f2a07a39)] - **gyp**: list(dict) so we can del dict(key) while iterating (Christian Clauss) [#2009](https://github.com/nodejs/node-gyp/pull/2009)
+* [[`f242ce4d2c`](https://github.com/nodejs/node-gyp/commit/f242ce4d2c)] - **lib**: compatibility with semver ≥ 7 (`new` for semver.Range) (Xavier Guimard) [#2006](https://github.com/nodejs/node-gyp/pull/2006)
+* [[`3bcba2a01a`](https://github.com/nodejs/node-gyp/commit/3bcba2a01a)] - **(SEMVER-MINOR)** **lib**: noproxy support, match proxy detection to `request` (Matias Lopez) [#1978](https://github.com/nodejs/node-gyp/pull/1978)
+* [[`470cc2178e`](https://github.com/nodejs/node-gyp/commit/470cc2178e)] - **test**: remove old docker test harness (#1993) (Rod Vagg) [#1993](https://github.com/nodejs/node-gyp/pull/1993)
+* [[`31ecc8421d`](https://github.com/nodejs/node-gyp/commit/31ecc8421d)] - **test**: add Windows to GitHub Actions testing (#1996) (Christian Clauss) [#1996](https://github.com/nodejs/node-gyp/pull/1996)
+* [[`5a729e86ee`](https://github.com/nodejs/node-gyp/commit/5a729e86ee)] - **test**: fix typo in header download test (#2001) (Richard Lau) [#2001](https://github.com/nodejs/node-gyp/pull/2001)
+* [[`345c70e56d`](https://github.com/nodejs/node-gyp/commit/345c70e56d)] - **test**: direct python invocation & simpler pyenv (Matias Lopez) [#1979](https://github.com/nodejs/node-gyp/pull/1979)
+* [[`d6a7e0e1fb`](https://github.com/nodejs/node-gyp/commit/d6a7e0e1fb)] - **test**: fix macOS Travis on Python 2.7 & 3.7 (Christian Clauss) [#1979](https://github.com/nodejs/node-gyp/pull/1979)
+* [[`5a64e9bd32`](https://github.com/nodejs/node-gyp/commit/5a64e9bd32)] - **test**: initial Github Actions with Ubuntu & macOS (Christian Clauss) [#1985](https://github.com/nodejs/node-gyp/pull/1985)
+* [[`04da736d38`](https://github.com/nodejs/node-gyp/commit/04da736d38)] - **test**: fix Python unittests (cclauss) [#1961](https://github.com/nodejs/node-gyp/pull/1961)
+* [[`0670e5189d`](https://github.com/nodejs/node-gyp/commit/0670e5189d)] - **test**: add header download test (Rod Vagg) [#1796](https://github.com/nodejs/node-gyp/pull/1796)
+* [[`c506a6a150`](https://github.com/nodejs/node-gyp/commit/c506a6a150)] - **test**: configure proper devDir for invoking configure() (Rod Vagg) [#1796](https://github.com/nodejs/node-gyp/pull/1796)
+
+v6.0.1 2019-11-01
+=================
+
+* [[`8ec2e681d5`](https://github.com/nodejs/node-gyp/commit/8ec2e681d5)] - **doc**: add macOS\_Catalina.md document (cclauss) [#1940](https://github.com/nodejs/node-gyp/pull/1940)
+* [[`1b11be63cc`](https://github.com/nodejs/node-gyp/commit/1b11be63cc)] - **gyp**: python3 fixes: utf8 decode, use of 'None' in eval (Wilfried Goesgens) [#1925](https://github.com/nodejs/node-gyp/pull/1925)
+* [[`c0282daa48`](https://github.com/nodejs/node-gyp/commit/c0282daa48)] - **gyp**: iteritems() -\> items() in compile\_commands\_json.py (cclauss) [#1947](https://github.com/nodejs/node-gyp/pull/1947)
+* [[`d8e09a1b6a`](https://github.com/nodejs/node-gyp/commit/d8e09a1b6a)] - **gyp**: make cmake python3 compatible (gengjiawen) [#1944](https://github.com/nodejs/node-gyp/pull/1944)
+* [[`9c0f3404f0`](https://github.com/nodejs/node-gyp/commit/9c0f3404f0)] - **gyp**: fix TypeError in XcodeVersion() (Christian Clauss) [#1939](https://github.com/nodejs/node-gyp/pull/1939)
+* [[`bb2eb72a3f`](https://github.com/nodejs/node-gyp/commit/bb2eb72a3f)] - **gyp**: finish decode stdout on Python 3 (Christian Clauss) [#1937](https://github.com/nodejs/node-gyp/pull/1937)
+* [[`f0693413d9`](https://github.com/nodejs/node-gyp/commit/f0693413d9)] - **src,win**: allow 403 errors for arm64 node.lib (Richard Lau) [#1934](https://github.com/nodejs/node-gyp/pull/1934)
+* [[`c60c22de58`](https://github.com/nodejs/node-gyp/commit/c60c22de58)] - **deps**: update deps to roughly match current npm@6 (Rod Vagg) [#1920](https://github.com/nodejs/node-gyp/pull/1920)
+* [[`b91718eefc`](https://github.com/nodejs/node-gyp/commit/b91718eefc)] - **test**: upgrade Linux Travis CI to Python 3.8 (Christian Clauss) [#1923](https://github.com/nodejs/node-gyp/pull/1923)
+* [[`3538a317b6`](https://github.com/nodejs/node-gyp/commit/3538a317b6)] - **doc**: adjustments to the README.md for new users (Dan Pike) [#1919](https://github.com/nodejs/node-gyp/pull/1919)
+* [[`4fff8458c0`](https://github.com/nodejs/node-gyp/commit/4fff8458c0)] - **travis**: ignore failed `brew upgrade npm`, update xcode (Christian Clauss) [#1932](https://github.com/nodejs/node-gyp/pull/1932)
+* [[`60e4488f08`](https://github.com/nodejs/node-gyp/commit/60e4488f08)] - **build**: avoid bare exceptions in xcode\_emulation.py (Christian Clauss) [#1932](https://github.com/nodejs/node-gyp/pull/1932)
+* [[`032db2a2d0`](https://github.com/nodejs/node-gyp/commit/032db2a2d0)] - **lib,install**: always download SHA sums on Windows (Sam Hughes) [#1926](https://github.com/nodejs/node-gyp/pull/1926)
+* [[`5a83630c33`](https://github.com/nodejs/node-gyp/commit/5a83630c33)] - **travis**: add Windows + Python 3.8 to the mix (Rod Vagg) [#1921](https://github.com/nodejs/node-gyp/pull/1921)
+
+v6.0.0 2019-10-04
+=================
+
+* [[`dd0e97ef0b`](https://github.com/nodejs/node-gyp/commit/dd0e97ef0b)] - **(SEMVER-MAJOR)** **lib**: try to find `python` after `python3` (Sam Roberts) [#1907](https://github.com/nodejs/node-gyp/pull/1907)
+* [[`f60ed47d14`](https://github.com/nodejs/node-gyp/commit/f60ed47d14)] - **travis**: add Python 3.5 and 3.6 tests on Linux (Christian Clauss) [#1903](https://github.com/nodejs/node-gyp/pull/1903)
+* [[`c763ca1838`](https://github.com/nodejs/node-gyp/commit/c763ca1838)] - **(SEMVER-MAJOR)** **doc**: Declare that node-gyp is Python 3 compatible (cclauss) [#1811](https://github.com/nodejs/node-gyp/pull/1811)
+* [[`3d1c60ab81`](https://github.com/nodejs/node-gyp/commit/3d1c60ab81)] - **(SEMVER-MAJOR)** **lib**: accept Python 3 by default (João Reis) [#1844](https://github.com/nodejs/node-gyp/pull/1844)
+* [[`c6e3b65a23`](https://github.com/nodejs/node-gyp/commit/c6e3b65a23)] - **(SEMVER-MAJOR)** **lib**: raise the minimum Python version from 2.6 to 2.7 (cclauss) [#1818](https://github.com/nodejs/node-gyp/pull/1818)
+
+v5.1.0 2020-02-05
+=================
+
+* [[`f37a8b40d0`](https://github.com/nodejs/node-gyp/commit/f37a8b40d0)] - **doc**: add GitHub Actions badge (#1994) (Rod Vagg) [#1994](https://github.com/nodejs/node-gyp/pull/1994)
+* [[`cb3f6aae5e`](https://github.com/nodejs/node-gyp/commit/cb3f6aae5e)] - **doc**: update macOS\_Catalina.md (#1992) (James Home) [#1992](https://github.com/nodejs/node-gyp/pull/1992)
+* [[`0607596a4c`](https://github.com/nodejs/node-gyp/commit/0607596a4c)] - **doc**: fix typo in README.md (#1985) (Suraneti Rodsuwan) [#1985](https://github.com/nodejs/node-gyp/pull/1985)
+* [[`0d5a415a14`](https://github.com/nodejs/node-gyp/commit/0d5a415a14)] - **doc**: add travis badge (Rod Vagg) [#1971](https://github.com/nodejs/node-gyp/pull/1971)
+* [[`103740cd95`](https://github.com/nodejs/node-gyp/commit/103740cd95)] - **gyp**: list(dict) so we can del dict(key) while iterating (Christian Clauss) [#2009](https://github.com/nodejs/node-gyp/pull/2009)
+* [[`278dcddbdd`](https://github.com/nodejs/node-gyp/commit/278dcddbdd)] - **lib**: ignore VS instances that cause COMExceptions (Andrew Casey) [#2018](https://github.com/nodejs/node-gyp/pull/2018)
+* [[`1694907bbf`](https://github.com/nodejs/node-gyp/commit/1694907bbf)] - **lib**: compatibility with semver ≥ 7 (`new` for semver.Range) (Xavier Guimard) [#2006](https://github.com/nodejs/node-gyp/pull/2006)
+* [[`a3f1143514`](https://github.com/nodejs/node-gyp/commit/a3f1143514)] - **(SEMVER-MINOR)** **lib**: noproxy support, match proxy detection to `request` (Matias Lopez) [#1978](https://github.com/nodejs/node-gyp/pull/1978)
+* [[`52365819c7`](https://github.com/nodejs/node-gyp/commit/52365819c7)] - **test**: remove old docker test harness (#1993) (Rod Vagg) [#1993](https://github.com/nodejs/node-gyp/pull/1993)
+* [[`bc509c511d`](https://github.com/nodejs/node-gyp/commit/bc509c511d)] - **test**: add Windows to GitHub Actions testing (#1996) (Christian Clauss) [#1996](https://github.com/nodejs/node-gyp/pull/1996)
+* [[`91ee26dd48`](https://github.com/nodejs/node-gyp/commit/91ee26dd48)] - **test**: fix typo in header download test (#2001) (Richard Lau) [#2001](https://github.com/nodejs/node-gyp/pull/2001)
+* [[`0923f344c9`](https://github.com/nodejs/node-gyp/commit/0923f344c9)] - **test**: direct python invocation & simpler pyenv (Matias Lopez) [#1979](https://github.com/nodejs/node-gyp/pull/1979)
+* [[`32c8744b34`](https://github.com/nodejs/node-gyp/commit/32c8744b34)] - **test**: fix macOS Travis on Python 2.7 & 3.7 (Christian Clauss) [#1979](https://github.com/nodejs/node-gyp/pull/1979)
+* [[`fd4b1351e4`](https://github.com/nodejs/node-gyp/commit/fd4b1351e4)] - **test**: initial Github Actions with Ubuntu & macOS (Christian Clauss) [#1985](https://github.com/nodejs/node-gyp/pull/1985)
+
+v5.0.7 2019-12-16
+=================
+
+Republish of v5.0.6 with unnecessary tarball removed from pack file.
+
+v5.0.6 2019-12-16
+=================
+
+* [[`cdec00286f`](https://github.com/nodejs/node-gyp/commit/cdec00286f)] - **doc**: adjustments to the README.md for new users (Dan Pike) [#1919](https://github.com/nodejs/node-gyp/pull/1919)
+* [[`b7c8233ef2`](https://github.com/nodejs/node-gyp/commit/b7c8233ef2)] - **test**: fix Python unittests (cclauss) [#1961](https://github.com/nodejs/node-gyp/pull/1961)
+* [[`e12b00ab0a`](https://github.com/nodejs/node-gyp/commit/e12b00ab0a)] - **doc**: macOS Catalina add two commands (Christian Clauss) [#1962](https://github.com/nodejs/node-gyp/pull/1962)
+* [[`70b9890c0d`](https://github.com/nodejs/node-gyp/commit/70b9890c0d)] - **test**: add header download test (Rod Vagg) [#1796](https://github.com/nodejs/node-gyp/pull/1796)
+* [[`4029fa8629`](https://github.com/nodejs/node-gyp/commit/4029fa8629)] - **test**: configure proper devDir for invoking configure() (Rod Vagg) [#1796](https://github.com/nodejs/node-gyp/pull/1796)
+* [[`fe8b02cc8b`](https://github.com/nodejs/node-gyp/commit/fe8b02cc8b)] - **doc**: add macOS\_Catalina.md document (cclauss) [#1940](https://github.com/nodejs/node-gyp/pull/1940)
+* [[`8ea47ce365`](https://github.com/nodejs/node-gyp/commit/8ea47ce365)] - **gyp**: python3 fixes: utf8 decode, use of 'None' in eval (Wilfried Goesgens) [#1925](https://github.com/nodejs/node-gyp/pull/1925)
+* [[`c7229716ba`](https://github.com/nodejs/node-gyp/commit/c7229716ba)] - **gyp**: iteritems() -\> items() in compile\_commands\_json.py (cclauss) [#1947](https://github.com/nodejs/node-gyp/pull/1947)
+* [[`2a18b2a0f8`](https://github.com/nodejs/node-gyp/commit/2a18b2a0f8)] - **gyp**: make cmake python3 compatible (gengjiawen) [#1944](https://github.com/nodejs/node-gyp/pull/1944)
+* [[`70f391e844`](https://github.com/nodejs/node-gyp/commit/70f391e844)] - **gyp**: fix TypeError in XcodeVersion() (Christian Clauss) [#1939](https://github.com/nodejs/node-gyp/pull/1939)
+* [[`9f4f0fa34e`](https://github.com/nodejs/node-gyp/commit/9f4f0fa34e)] - **gyp**: finish decode stdout on Python 3 (Christian Clauss) [#1937](https://github.com/nodejs/node-gyp/pull/1937)
+* [[`7cf507906d`](https://github.com/nodejs/node-gyp/commit/7cf507906d)] - **src,win**: allow 403 errors for arm64 node.lib (Richard Lau) [#1934](https://github.com/nodejs/node-gyp/pull/1934)
+* [[`ad0d182c01`](https://github.com/nodejs/node-gyp/commit/ad0d182c01)] - **deps**: update deps to roughly match current npm@6 (Rod Vagg) [#1920](https://github.com/nodejs/node-gyp/pull/1920)
+* [[`1553081ed6`](https://github.com/nodejs/node-gyp/commit/1553081ed6)] - **test**: upgrade Linux Travis CI to Python 3.8 (Christian Clauss) [#1923](https://github.com/nodejs/node-gyp/pull/1923)
+* [[`0705cae9aa`](https://github.com/nodejs/node-gyp/commit/0705cae9aa)] - **travis**: ignore failed `brew upgrade npm`, update xcode (Christian Clauss) [#1932](https://github.com/nodejs/node-gyp/pull/1932)
+* [[`7bfdb6f5bf`](https://github.com/nodejs/node-gyp/commit/7bfdb6f5bf)] - **build**: avoid bare exceptions in xcode\_emulation.py (Christian Clauss) [#1932](https://github.com/nodejs/node-gyp/pull/1932)
+* [[`7edf7658fa`](https://github.com/nodejs/node-gyp/commit/7edf7658fa)] - **lib,install**: always download SHA sums on Windows (Sam Hughes) [#1926](https://github.com/nodejs/node-gyp/pull/1926)
+* [[`69056d04fe`](https://github.com/nodejs/node-gyp/commit/69056d04fe)] - **travis**: add Windows + Python 3.8 to the mix (Rod Vagg) [#1921](https://github.com/nodejs/node-gyp/pull/1921)
+
+v5.0.5 2019-10-04
+=================
+
+* [[`3891391746`](https://github.com/nodejs/node-gyp/commit/3891391746)] - **doc**: reconcile README with Python 3 compat changes (Rod Vagg) [#1911](https://github.com/nodejs/node-gyp/pull/1911)
+* [[`07f81f1920`](https://github.com/nodejs/node-gyp/commit/07f81f1920)] - **lib**: accept Python 3 after Python 2 (Sam Roberts) [#1910](https://github.com/nodejs/node-gyp/pull/1910)
+* [[`04ce59f4a2`](https://github.com/nodejs/node-gyp/commit/04ce59f4a2)] - **doc**: clarify Python configuration, etc (Sam Roberts) [#1908](https://github.com/nodejs/node-gyp/pull/1908)
+* [[`01c46ee3df`](https://github.com/nodejs/node-gyp/commit/01c46ee3df)] - **gyp**: add \_\_lt\_\_ to MSVSSolutionEntry (João Reis) [#1904](https://github.com/nodejs/node-gyp/pull/1904)
+* [[`735d961b99`](https://github.com/nodejs/node-gyp/commit/735d961b99)] - **win**: support VS 2017 Desktop Express (João Reis) [#1902](https://github.com/nodejs/node-gyp/pull/1902)
+* [[`3834156a92`](https://github.com/nodejs/node-gyp/commit/3834156a92)] - **test**: add Python 3.5 and 3.6 tests on Linux (cclauss) [#1909](https://github.com/nodejs/node-gyp/pull/1909)
+* [[`1196e990d8`](https://github.com/nodejs/node-gyp/commit/1196e990d8)] - **src**: update to standard@14 (Rod Vagg) [#1899](https://github.com/nodejs/node-gyp/pull/1899)
+* [[`53ee7dfe89`](https://github.com/nodejs/node-gyp/commit/53ee7dfe89)] - **gyp**: fix undefined name: cflags --\> ldflags (Christian Clauss) [#1901](https://github.com/nodejs/node-gyp/pull/1901)
+* [[`5871dcf6c9`](https://github.com/nodejs/node-gyp/commit/5871dcf6c9)] - **src,win**: add support for fetching arm64 node.lib (Richard Townsend) [#1875](https://github.com/nodejs/node-gyp/pull/1875)
+
+v5.0.4 2019-09-27
+=================
+
+* [[`1236869ffc`](https://github.com/nodejs/node-gyp/commit/1236869ffc)] - **gyp**: modify XcodeVersion() to convert "4.2" to "0420" and "10.0" to "1000" (Christian Clauss) [#1895](https://github.com/nodejs/node-gyp/pull/1895)
+* [[`36638afe48`](https://github.com/nodejs/node-gyp/commit/36638afe48)] - **gyp**: more decode stdout on Python 3 (cclauss) [#1894](https://github.com/nodejs/node-gyp/pull/1894)
+* [[`f753c167c5`](https://github.com/nodejs/node-gyp/commit/f753c167c5)] - **gyp**: decode stdout on Python 3 (cclauss) [#1890](https://github.com/nodejs/node-gyp/pull/1890)
+* [[`60a4083523`](https://github.com/nodejs/node-gyp/commit/60a4083523)] - **doc**: update xcode install instructions to match Node's BUILDING (Nhan Khong) [#1884](https://github.com/nodejs/node-gyp/pull/1884)
+* [[`19dbc9ac32`](https://github.com/nodejs/node-gyp/commit/19dbc9ac32)] - **deps**: update tar to 4.4.12 (Matheus Marchini) [#1889](https://github.com/nodejs/node-gyp/pull/1889)
+* [[`5f3ed92181`](https://github.com/nodejs/node-gyp/commit/5f3ed92181)] - **bin**: fix the usage instructions (Halit Ogunc) [#1888](https://github.com/nodejs/node-gyp/pull/1888)
+* [[`aab118edf1`](https://github.com/nodejs/node-gyp/commit/aab118edf1)] - **lib**: adding keep-alive header to download requests (Milad Farazmand) [#1863](https://github.com/nodejs/node-gyp/pull/1863)
+* [[`1186e89326`](https://github.com/nodejs/node-gyp/commit/1186e89326)] - **lib**: ignore non-critical os.userInfo() failures (Rod Vagg) [#1835](https://github.com/nodejs/node-gyp/pull/1835)
+* [[`785e527c3d`](https://github.com/nodejs/node-gyp/commit/785e527c3d)] - **doc**: fix missing argument for setting python path (lagorsse) [#1802](https://github.com/nodejs/node-gyp/pull/1802)
+* [[`a97615196c`](https://github.com/nodejs/node-gyp/commit/a97615196c)] - **gyp**: rm semicolons (Python != JavaScript) (MattIPv4) [#1858](https://github.com/nodejs/node-gyp/pull/1858)
+* [[`06019bac24`](https://github.com/nodejs/node-gyp/commit/06019bac24)] - **gyp**: assorted typo fixes (XhmikosR) [#1853](https://github.com/nodejs/node-gyp/pull/1853)
+* [[`3f4972c1ca`](https://github.com/nodejs/node-gyp/commit/3f4972c1ca)] - **gyp**: use "is" when comparing to None (Vladyslav Burzakovskyy) [#1860](https://github.com/nodejs/node-gyp/pull/1860)
+* [[`1cb4708073`](https://github.com/nodejs/node-gyp/commit/1cb4708073)] - **src,win**: improve unmanaged handling (Peter Sabath) [#1852](https://github.com/nodejs/node-gyp/pull/1852)
+* [[`5553cd910e`](https://github.com/nodejs/node-gyp/commit/5553cd910e)] - **gyp**: improve Windows+Cygwin compatibility (Jose Quijada) [#1817](https://github.com/nodejs/node-gyp/pull/1817)
+* [[`8bcb1fbb43`](https://github.com/nodejs/node-gyp/commit/8bcb1fbb43)] - **gyp**: Python 3 Windows fixes (João Reis) [#1843](https://github.com/nodejs/node-gyp/pull/1843)
+* [[`2e24d0a326`](https://github.com/nodejs/node-gyp/commit/2e24d0a326)] - **test**: accept Python 3 in test-find-python.js (João Reis) [#1843](https://github.com/nodejs/node-gyp/pull/1843)
+* [[`1267b4dc1c`](https://github.com/nodejs/node-gyp/commit/1267b4dc1c)] - **build**: add test run Python 3.7 on macOS (Christian Clauss) [#1843](https://github.com/nodejs/node-gyp/pull/1843)
+* [[`da1b031aa3`](https://github.com/nodejs/node-gyp/commit/da1b031aa3)] - **build**: import StringIO on Python 2 and Python 3 (Christian Clauss) [#1836](https://github.com/nodejs/node-gyp/pull/1836)
+* [[`fa0ed4aa42`](https://github.com/nodejs/node-gyp/commit/fa0ed4aa42)] - **build**: more Python 3 compat, replace compile with ast (cclauss) [#1820](https://github.com/nodejs/node-gyp/pull/1820)
+* [[`18d5c7c9d0`](https://github.com/nodejs/node-gyp/commit/18d5c7c9d0)] - **win,src**: update win\_delay\_load\_hook.cc to work with /clr (Ivan Petrovic) [#1819](https://github.com/nodejs/node-gyp/pull/1819)
+
+v5.0.3 2019-07-17
+=================
+
+* [[`66ad305775`](https://github.com/nodejs/node-gyp/commit/66ad305775)] - **python**: accept Python 3 conditionally (João Reis) [#1815](https://github.com/nodejs/node-gyp/pull/1815)
+* [[`7e7fce3fed`](https://github.com/nodejs/node-gyp/commit/7e7fce3fed)] - **python**: move Python detection to its own file (João Reis) [#1815](https://github.com/nodejs/node-gyp/pull/1815)
+* [[`e40c99e283`](https://github.com/nodejs/node-gyp/commit/e40c99e283)] - **src**: implement standard.js linting (Rod Vagg) [#1794](https://github.com/nodejs/node-gyp/pull/1794)
+* [[`bb92c761a9`](https://github.com/nodejs/node-gyp/commit/bb92c761a9)] - **test**: add Node.js 6 on Windows to Travis CI (João Reis) [#1812](https://github.com/nodejs/node-gyp/pull/1812)
+* [[`7fd924079f`](https://github.com/nodejs/node-gyp/commit/7fd924079f)] - **test**: increase tap timeout (João Reis) [#1812](https://github.com/nodejs/node-gyp/pull/1812)
+* [[`7e8127068f`](https://github.com/nodejs/node-gyp/commit/7e8127068f)] - **test**: cover supported node versions with travis (Rod Vagg) [#1809](https://github.com/nodejs/node-gyp/pull/1809)
+* [[`24109148df`](https://github.com/nodejs/node-gyp/commit/24109148df)] - **test**: downgrade to tap@^12 for continued Node 6 support (Rod Vagg) [#1808](https://github.com/nodejs/node-gyp/pull/1808)
+* [[`656117cc4a`](https://github.com/nodejs/node-gyp/commit/656117cc4a)] - **win**: make VS path match case-insensitive (João Reis) [#1806](https://github.com/nodejs/node-gyp/pull/1806)
+
+v5.0.2 2019-06-27
+=================
+
+* [[`2761afbf73`](https://github.com/nodejs/node-gyp/commit/2761afbf73)] - **build,test**: add duplicate symbol test (Gabriel Schulhof) [#1689](https://github.com/nodejs/node-gyp/pull/1689)
+* [[`82f129d6de`](https://github.com/nodejs/node-gyp/commit/82f129d6de)] - **gyp**: replace optparse to argparse (KiYugadgeter) [#1591](https://github.com/nodejs/node-gyp/pull/1591)
+* [[`afaaa29c61`](https://github.com/nodejs/node-gyp/commit/afaaa29c61)] - **gyp**: remove from \_\_future\_\_ import with\_statement (cclauss) [#1799](https://github.com/nodejs/node-gyp/pull/1799)
+* [[`a991f633d6`](https://github.com/nodejs/node-gyp/commit/a991f633d6)] - **gyp**: fix the remaining Python 3 issues (cclauss) [#1793](https://github.com/nodejs/node-gyp/pull/1793)
+* [[`f952b08f84`](https://github.com/nodejs/node-gyp/commit/f952b08f84)] - **gyp**: move from \_\_future\_\_ import to the top of the file (cclauss) [#1789](https://github.com/nodejs/node-gyp/pull/1789)
+* [[`4f4a677dfa`](https://github.com/nodejs/node-gyp/commit/4f4a677dfa)] - **gyp**: use different default compiler for z/OS (Shuowang (Wayne) Zhang) [#1768](https://github.com/nodejs/node-gyp/pull/1768)
+* [[`03683f09d6`](https://github.com/nodejs/node-gyp/commit/03683f09d6)] - **lib**: code de-duplication (Pavel Medvedev) [#965](https://github.com/nodejs/node-gyp/pull/965)
+* [[`611bc3c89f`](https://github.com/nodejs/node-gyp/commit/611bc3c89f)] - **lib**: add .json suffix for explicit require (Rod Vagg) [#1787](https://github.com/nodejs/node-gyp/pull/1787)
+* [[`d3478d7b0b`](https://github.com/nodejs/node-gyp/commit/d3478d7b0b)] - **meta**: add to .gitignore (Refael Ackermann) [#1573](https://github.com/nodejs/node-gyp/pull/1573)
+* [[`7a9a038e9e`](https://github.com/nodejs/node-gyp/commit/7a9a038e9e)] - **test**: add parallel test runs on macOS and Windows (cclauss) [#1800](https://github.com/nodejs/node-gyp/pull/1800)
+* [[`7dd7f2b2a2`](https://github.com/nodejs/node-gyp/commit/7dd7f2b2a2)] - **test**: fix Python syntax error in test-adding.js (cclauss) [#1793](https://github.com/nodejs/node-gyp/pull/1793)
+* [[`395f843de0`](https://github.com/nodejs/node-gyp/commit/395f843de0)] - **test**: replace self-signed cert with 'localhost' (Rod Vagg) [#1795](https://github.com/nodejs/node-gyp/pull/1795)
+* [[`a52c6eb9e8`](https://github.com/nodejs/node-gyp/commit/a52c6eb9e8)] - **test**: migrate from tape to tap (Rod Vagg) [#1795](https://github.com/nodejs/node-gyp/pull/1795)
+* [[`ec2eb44a30`](https://github.com/nodejs/node-gyp/commit/ec2eb44a30)] - **test**: use Nan in duplicate\_symbols (Gabriel Schulhof) [#1689](https://github.com/nodejs/node-gyp/pull/1689)
+* [[`1597c84aad`](https://github.com/nodejs/node-gyp/commit/1597c84aad)] - **test**: use Travis CI to run tests on every pull request (cclauss) [#1752](https://github.com/nodejs/node-gyp/pull/1752)
+* [[`dd9bf929ac`](https://github.com/nodejs/node-gyp/commit/dd9bf929ac)] - **zos**: update compiler options (Shuowang (Wayne) Zhang) [#1768](https://github.com/nodejs/node-gyp/pull/1768)
+
 v5.0.1 2019-06-20
 =================
 

@@ -22,6 +22,12 @@ from xml.dom.minidom import Node
 
 __author__ = 'nsylvain (Nicolas Sylvain)'
 
+try:
+  cmp
+except NameError:
+  def cmp(x, y):
+    return (x > y) - (x < y)
+
 REPLACEMENTS = dict()
 ARGUMENTS = None
 
@@ -259,7 +265,7 @@ def MergeAttributes(node1, node2):
       if value1 != value2:
         node1.setAttribute(name, ';'.join([value1, value2]))
     else:
-      # The attribute does nto exist in the main node. We append this one.
+      # The attribute does not exist in the main node. We append this one.
       node1.setAttribute(name, value2)
 
     # If the attribute was a property sheet attributes, we remove it, since
@@ -285,8 +291,8 @@ def main(argv):
 
   # check if we have exactly 1 parameter.
   if len(argv) < 2:
-    print(('Usage: %s "c:\\path\\to\\vcproj.vcproj" [key1=value1] '
-           '[key2=value2]' % argv[0]))
+    print('Usage: %s "c:\\path\\to\\vcproj.vcproj" [key1=value1] '
+          '[key2=value2]' % argv[0])
     return 1
 
   # Parse the keys

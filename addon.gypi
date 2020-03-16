@@ -1,7 +1,8 @@
 {
   'variables' : {
     'node_engine_include_dir%': 'deps/v8/include',
-    'node_host_binary%': 'node'
+    'node_host_binary%': 'node',
+    'node_with_ltcg%': 'true',
   },
   'target_defaults': {
     'type': 'loadable_module',
@@ -90,14 +91,10 @@
 
     'conditions': [
       [ 'OS=="mac"', {
-        'cflags': [
-          '-fvisibility=hidden'
-        ],
         'defines': [
           '_DARWIN_USE_64_BIT_INODE=1'
         ],
         'xcode_settings': {
-          'GCC_SYMBOLS_PRIVATE_EXTERN': 'YES', # -fvisibility=hidden
           'DYLIB_INSTALL_NAME_BASE': '@rpath'
         },
       }],
@@ -130,6 +127,26 @@
             'library_dirs': [ '<(node_root_dir)/$(ConfigurationName)' ],
             'libraries': [ '<@(node_engine_libs)' ],
           }],
+          ['node_with_ltcg=="true"', {
+            'msvs_settings': {
+              'VCCLCompilerTool': {
+                'WholeProgramOptimization': 'true' # /GL, whole program optimization, needed for LTCG
+              },
+              'VCLibrarianTool': {
+                'AdditionalOptions': [
+                  '/LTCG:INCREMENTAL', # incremental link-time code generation
+                ]
+              },
+              'VCLinkerTool': {
+                'OptimizeReferences': 2, # /OPT:REF
+                'EnableCOMDATFolding': 2, # /OPT:ICF
+                'LinkIncremental': 1, # disable incremental linking
+                'AdditionalOptions': [
+                  '/LTCG:INCREMENTAL', # incremental link-time code generation
+                ]
+              }
+            }
+          }]
         ],
         'libraries': [
           '-lkernel32.lib',

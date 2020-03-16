@@ -1,7 +1,8 @@
-from __future__ import print_function
 # Copyright (c) 2012 Google Inc. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
+
+from __future__ import print_function
 
 import filecmp
 import gyp.common
@@ -78,6 +79,7 @@ generator_additional_non_configuration_keys = [
   'mac_framework_headers',
   'mac_framework_private_headers',
   'mac_xctest_bundle',
+  'mac_xcuitest_bundle',
   'xcode_create_dependents_test_runner',
 ]
 
@@ -246,7 +248,7 @@ class XcodeProject(object):
         targets_for_all.append(xcode_target)
 
       if target_name.lower() == 'all':
-        has_custom_all = True;
+        has_custom_all = True
 
       # If this target has a 'run_as' attribute, add its target to the
       # targets, and add it to the test targets.
@@ -539,7 +541,7 @@ def ExpandXcodeVariables(string, expansions):
   """
 
   matches = _xcode_variable_re.findall(string)
-  if matches == None:
+  if matches is None:
     return string
 
   matches.reverse()
@@ -637,7 +639,7 @@ def GenerateOutput(target_list, target_dicts, data, params):
     pbxp = xcp.project
 
     # Set project-level attributes from multiple options
-    project_attributes = {};
+    project_attributes = {}
     if parallel_builds:
       project_attributes['BuildIndependentTargetsInParallel'] = 'YES'
     if upgrade_check_project_version:
@@ -692,6 +694,7 @@ def GenerateOutput(target_list, target_dicts, data, params):
       'executable+bundle':           'com.apple.product-type.application',
       'loadable_module+bundle':      'com.apple.product-type.bundle',
       'loadable_module+xctest':      'com.apple.product-type.bundle.unit-test',
+      'loadable_module+xcuitest':    'com.apple.product-type.bundle.ui-testing',
       'shared_library+bundle':       'com.apple.product-type.framework',
       'executable+extension+bundle': 'com.apple.product-type.app-extension',
       'executable+watch+extension+bundle':
@@ -708,13 +711,19 @@ def GenerateOutput(target_list, target_dicts, data, params):
 
     type = spec['type']
     is_xctest = int(spec.get('mac_xctest_bundle', 0))
+    is_xcuitest = int(spec.get('mac_xcuitest_bundle', 0))
     is_bundle = int(spec.get('mac_bundle', 0)) or is_xctest
     is_app_extension = int(spec.get('ios_app_extension', 0))
     is_watchkit_extension = int(spec.get('ios_watchkit_extension', 0))
     is_watch_app = int(spec.get('ios_watch_app', 0))
     if type != 'none':
       type_bundle_key = type
-      if is_xctest:
+      if is_xcuitest:
+        type_bundle_key += '+xcuitest'
+        assert type == 'loadable_module', (
+            'mac_xcuitest_bundle targets must have type loadable_module '
+            '(target %s)' % target_name)
+      elif is_xctest:
         type_bundle_key += '+xctest'
         assert type == 'loadable_module', (
             'mac_xctest_bundle targets must have type loadable_module '
@@ -746,6 +755,9 @@ def GenerateOutput(target_list, target_dicts, data, params):
       assert not is_bundle, (
           'mac_bundle targets cannot have type none (target "%s")' %
           target_name)
+      assert not is_xcuitest, (
+          'mac_xcuitest_bundle targets cannot have type none (target "%s")' %
+          target_name)
       assert not is_xctest, (
           'mac_xctest_bundle targets cannot have type none (target "%s")' %
           target_name)
@@ -776,7 +788,7 @@ def GenerateOutput(target_list, target_dicts, data, params):
     # logic all happens in ninja.  Don't bother creating the extra targets in
     # that case.
     if type != 'none' and (spec_actions or spec_rules) and not ninja_wrapper:
-      support_xccl = CreateXCConfigurationList(configuration_names);
+      support_xccl = CreateXCConfigurationList(configuration_names)
       support_target_suffix = generator_flags.get(
           'support_target_suffix', ' Support')
       support_target_properties = {
@@ -998,7 +1010,7 @@ def GenerateOutput(target_list, target_dicts, data, params):
         actions.append(action)
 
       if len(concrete_outputs_all) > 0:
-        # TODO(mark): There's a possibilty for collision here.  Consider
+        # TODO(mark): There's a possibility for collision here.  Consider
         # target "t" rule "A_r" and target "t_A" rule "r".
         makefile_name = '%s.make' % re.sub(
             '[^a-zA-Z0-9_]', '_' , '%s_%s' % (target_name, rule['rule_name']))
@@ -1171,7 +1183,7 @@ exit 1
         dest = '$(SRCROOT)/' + dest
 
       code_sign = int(copy_group.get('xcode_code_sign', 0))
-      settings = (None, '{ATTRIBUTES = (CodeSignOnCopy, ); }')[code_sign];
+      settings = (None, '{ATTRIBUTES = (CodeSignOnCopy, ); }')[code_sign]
 
       # Coalesce multiple "copies" sections in the same target with the same
       # "destination" property into the same PBXCopyFilesBuildPhase, otherwise
